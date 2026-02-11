@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend? 🌹</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="assets/hero_image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+</head>
+
+<body>
+    <div class="background-hearts"></div>
+
+    <div class="container">
+        <header class="hero">
+            <h1 class="animate-pop-in">Will You Be My Girlfriend? 🌹</h1>
+            <p class="animate-fade-in">Every moment with you is special. You make me smile like no one else. I want
+                to make this official...</p>
+            <div class="illustration-container animate-fade-in">
+                <img src="assets/hero_image.png" alt="Cute Couple" id="hero-img">
+            </div>
+        </header>
+
+        <div class="interaction-area">
+            <button id="yes-btn" class="btn btn-yes">YES 💖</button>
+            <button id="no-btn" class="btn btn-no">NO 😢</button>
+        </div>
+    </div>
+
+    <!-- Hidden Celebration Modal -->
+    <div id="celebration-modal" class="modal hidden">
+        <div class="modal-content glass">
+            <h2>Yay! You just made me the happiest person! ❤️💑</h2>
+            <div class="heart-explosion"></div>
+            <button id="memories-btn" class="btn btn-secondary">Create New Memories</button>
+        </div>
+    </div>
+
+    <!-- Memories Gallery Section -->
+    <section id="memories-section" class="hidden">
+        <h2>Our Journey Begins</h2>
+        <div class="gallery-grid">
+            <!-- Placeholders for user to replace -->
+            <div class="gallery-item">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23eee'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%23aaa'%3EPhoto 1%3C/text%3E%3C/svg%3E"
+                    id="img-1" alt="Memory 1">
+                <p class="caption">The day we met</p>
+                <label for="upload-1" class="upload-btn-small">📷 Upload</label>
+                <input type="file" id="upload-1" accept="image/*" style="display: none;"
+                    onchange="updateImage(this, 'img-1')">
+            </div>
+            <div class="gallery-item">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23eee'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%23aaa'%3EPhoto 2%3C/text%3E%3C/svg%3E"
+                    id="img-2" alt="Memory 2">
+                <p class="caption">First Date</p>
+                <label for="upload-2" class="upload-btn-small">📷 Upload</label>
+                <input type="file" id="upload-2" accept="image/*" style="display: none;"
+                    onchange="updateImage(this, 'img-2')">
+            </div>
+            <div class="gallery-item">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23eee'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%23aaa'%3EPhoto 3%3C/text%3E%3C/svg%3E"
+                    id="img-3" alt="Memory 3">
+                <p class="caption">Silly Moments</p>
+                <label for="upload-3" class="upload-btn-small">📷 Upload</label>
+                <input type="file" id="upload-3" accept="image/*" style="display: none;"
+                    onchange="updateImage(this, 'img-3')">
+            </div>
+            <div class="gallery-item">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23eee'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%23aaa'%3EPhoto 4%3C/text%3E%3C/svg%3E"
+                    id="img-4" alt="Memory 4">
+                <p class="caption">Unforgettable Trip</p>
+                <label for="upload-4" class="upload-btn-small">📷 Upload</label>
+                <input type="file" id="upload-4" accept="image/*" style="display: none;"
+                    onchange="updateImage(this, 'img-4')">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with all my love ❤️ – Forever Yours</p>
+    </footer>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
